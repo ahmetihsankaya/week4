@@ -17,6 +17,6 @@ for _ in range(12):
 
 tess.clear()
 
-
+window.bgcolor("blue")
 window.exitonclick()
 
