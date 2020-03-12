@@ -1,22 +1,29 @@
 import turtle
-window = turtle.Screen()
-window.bgcolor("lightgreen")
-tess = turtle.Turtle()
-tess.shape("turtle")
-tess.color("blue")
 
-for _ in range(12):
-    tess.stamp()
-    tess.penup()
-    tess.forward(100)
-    tess.pendown()
-    tess.forward(20)
-    tess.penup()
-    tess.forward(20)
-    tess.stamp()
+def draw_star(drawing):
+    for _ in range(5):
+        drawing.forward(100)
+        drawing.right(144)
 
-tess.clear()
+screen = turtle.Screen()
+screen.bgcolor("lightgreen")
+aik = turtle.Turtle()
+aik.color("hotpink")
 
-window.bgcolor("blue")
-window.exitonclick()
+aik.penup()
+aik.setposition(-175, 100)
+aik.pendown()
+
+draw_star(aik)
+
+for _ in range (4):
+    aik.penup()
+    aik.forward(350)
+    aik.right(144)
+    aik.pendown()
+    draw_star(aik)
+
+screen.exitonclick()
+
+
 
